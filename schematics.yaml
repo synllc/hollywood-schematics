@@ -1,0 +1,296 @@
+# SETTING TYPES
+# Look for "TYPE OPTIONS" for type-specific fields.
+# ==================================
+# 0:  Numeric   -> A number (123, 0xDEADBEEF). Rendered as a range slider.
+# 1:  String    -> A string. Rendered as an editable text input.
+# 2:  Boolean   -> A boolean. Rendered as a toggleable check box.
+# 3:  Options   -> A list of options, rendered as a dropdown.
+# 4:  Toggles   -> A list of options, rendered as a list of buttons.
+# 5:  Key       -> A hotkey. User clicks, presses new keybind.
+# 6:  Path      -> A file path. Rendered as a file selector.
+# 7:  Color     -> A color. Rendered as a color picker.
+# 8:  Action    -> Built-in type. Do not use.
+# 9:  List      -> A list. Either a list of files or strings.
+
+# SCHEMA SCOPES
+# ==================================
+# 0:  Interface -> Settings limited to the interface.
+# 1:  Engine    -> Settings replicated to the engine, but not internally cached.
+# 2:  Scriptable-> Settings replicated to the engine and are internally cached.
+
+# FULFILLMENT TYPES
+# ==================================
+# 0:  Automatic -> The schema provides all the info/logic necessary for applying the setting's effects.
+# 1:  Remote    -> The effects of the schema are limited to the engine and won't have any UI effects.
+# 2:  Manual    -> An external piece of logic handles the setting's effects.
+
+# LIST TYPES
+# ==================================
+# 0:  Strings   -> A list of strings.
+# 1:  Files     -> A list of files.
+# 2:  Paths     -> A list of files AND/OR directories.
+
+# TYPE OPTIONS
+# ==================================
+# 0:  Numeric
+#     -> You can define the "slider" object.
+#       -> "minimum": Number. Cannot go under this one.
+#       -> "maximum": Number. Cannot go above this one.
+#       -> "step": Number. Increment/decrement between options.
+# 3:  Options
+#     -> You can define the "options" string array.
+# 4:  Toggles
+#     -> You can define the "toggles" object array.
+#       -> (per object) "title": Text within the toggle.
+#       -> (per object) "icon": Icon within the toggle.
+
+Editor:
+  actionbar-direction:
+    default: 1
+    fulfillment: 0
+    scope: 0
+    type: 4
+    toggles:
+      - title: Align to left (Classic style)
+        icon: fluent:align-left-16-filled
+      - title: Align to right (Modern style)
+        icon: fluent:align-right-16-filled
+  animcursor:
+    default: true
+    fulfillment: 0
+    scope: 0
+    type: 2
+  compactbtns:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+  editorstyle:
+    default: 0
+    fulfillment: 0
+    scope: 0
+    type: 4
+    toggles:
+      - title: Actions on bottom, tabs on top
+        icon: fluent:panel-bottom-contract-20-filled
+      - title: Actions on top, tabs on bottom
+        icon: fluent:panel-top-contract-20-filled
+  filelist:
+    default: []
+    fulfillment: 0
+    scope: 0
+    type: 9
+    listType: 2
+  fsize:
+    default: 16
+    fulfillment: 0
+    scope: 0
+    type: 0
+    slider:
+      minimum: 8
+      maximum: 48
+  hidefiles:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+  informationarea:
+    default: true
+    fulfillment: 0
+    scope: 0
+    type: 2
+  ligatures:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+  lualsp:
+    default: true
+    fulfillment: 0
+    scope: 0
+    type: 2
+  minimap:
+    default: 1
+    fulfillment: 0
+    scope: 0
+    type: 4
+    toggles:
+      - title: No minimap
+        icon: fluent:presence-blocked-16-regular
+      - title: Minimap on right
+        icon: fluent:panel-right-contract-16-filled
+      - title: Minimap on left
+        icon: fluent:panel-left-contract-16-filled
+  newtabcontent:
+    default: print('Synapse winning!')
+    fulfillment: 0
+    scope: 0
+    type: 1
+  scrollspeed:
+    default: 100
+    fulfillment: 0
+    scope: 0
+    type: 0
+    slider:
+      minimum: 10
+      maximum: 300
+  sidebarlayout:
+    default: 1
+    fulfillment: 0
+    scope: 0
+    type: 4
+    toggles:
+      - title: Align to left
+        icon: fluent:align-left-16-filled
+      - title: Align to right
+        icon: fluent:align-right-16-filled
+  smoothscroll:
+    default: true
+    fulfillment: 0
+    scope: 0
+    type: 2
+  sounds:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+    experimental: true
+  squaretabs:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+  tablength:
+    default: 4
+    fulfillment: 0
+    scope: 0
+    type: 0
+    slider:
+      minimum: 2
+      maximum: 8
+  tokenizationlines:
+    default: 10000
+    fulfillment: 0
+    scope: 0
+    type: 0
+    slider:
+      minimum: 420
+      maximum: 50000
+  unsavedwarn:
+    default: true
+    fulfillment: 0
+    scope: 0
+    type: 2
+  wordwrap:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+
+Console & logging:
+  autoconsole:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+  lspconsole:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+  preservationcount:
+    default: 720
+    fulfillment: 0
+    scope: 0
+    type: 0
+    slider:
+      maximum: 8192
+      minimum: 64
+  preservelogs:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+
+Interface & layout:
+  classiclayout:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+  logconsole:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+  navbarstyle:
+    default: 0
+    fulfillment: 0
+    scope: 0
+    type: 4
+    toggles:
+      - title: Align to top
+        icon: fluent:panel-top-contract-20-filled
+      - title: Align to left
+        icon: fluent:panel-left-contract-20-filled
+  scale:
+    default: 100
+    fulfillment: 0
+    scope: 0
+    type: 0
+    slider:
+      minimum: 25
+      maximum: 150
+  silentlaunch:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+  topmost:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+  tray:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+  verticalnavcenter:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+  windowtransparency:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+
+Explorer:
+  dmsync:
+    default: true
+    fulfillment: 0
+    scope: 0
+    type: 2
+
+Integrations:
+  enableconnections:
+    scope: 0
+    type: 2
+    fulfillment: 0
+    default: true
+  gistpat:
+    scope: 0
+    type: 8
+    fulfillment: 2
+    caption: Integrate
+    default: ''
+
+Misc:
+  experimentalsettings:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
+    disableListing: true
