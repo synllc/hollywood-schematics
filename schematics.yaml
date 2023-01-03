@@ -70,6 +70,13 @@ Editor:
     fulfillment: 0
     scope: 0
     type: 2
+  languageserver:
+    default: 0
+    fulfillment: 0
+    scope: 0
+    type: 3
+    options:
+      values: []
   editorstyle:
     default: 0
     fulfillment: 0
