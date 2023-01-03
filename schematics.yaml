@@ -65,6 +65,11 @@ Editor:
     fulfillment: 0
     scope: 0
     type: 2
+  contextualexecution:
+    default: false
+    fulfillment: 0
+    scope: 0
+    type: 2
   editorstyle:
     default: 0
     fulfillment: 0
