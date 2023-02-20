@@ -44,7 +44,7 @@
 #       -> (per object) "title": Text within the toggle.
 #       -> (per object) "icon": Icon within the toggle.
 
-Editor:
+editor:
   actionbar-direction:
     default: 1
     fulfillment: 0
@@ -199,7 +199,7 @@ Editor:
     scope: 0
     type: 2
 
-Console & logging:
+console:
   autoconsole:
     default: false
     fulfillment: 0
@@ -224,7 +224,7 @@ Console & logging:
     scope: 0
     type: 2
 
-Interface & layout:
+interface:
   classiclayout:
     default: false
     fulfillment: 0
@@ -279,14 +279,14 @@ Interface & layout:
     scope: 0
     type: 2
 
-Explorer:
+explorer:
   dmsync:
     default: true
     fulfillment: 0
     scope: 0
     type: 2
 
-Integrations:
+integrations:
   enableconnections:
     scope: 0
     type: 2
@@ -299,7 +299,7 @@ Integrations:
     caption: Integrate
     default: ''
 
-Misc:
+misc:
   experimentalsettings:
     default: false
     fulfillment: 0
