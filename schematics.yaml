@@ -279,26 +279,6 @@ interface:
     scope: 0
     type: 2
 
-explorer:
-  dmsync:
-    default: true
-    fulfillment: 0
-    scope: 0
-    type: 2
-
-integrations:
-  enableconnections:
-    scope: 0
-    type: 2
-    fulfillment: 0
-    default: true
-  gistpat:
-    scope: 0
-    type: 8
-    fulfillment: 2
-    caption: Integrate
-    default: ''
-
 misc:
   experimentalsettings:
     default: false
