@@ -55,6 +55,11 @@ editor:
         icon: fluent:align-left-16-filled
       - title: Align to right (Modern style)
         icon: fluent:align-right-16-filled
+  ai:
+    default: true
+    fulfillment: 0
+    scope: 0
+    type: 2
   animcursor:
     default: true
     fulfillment: 0
